@@ -1,7 +1,4 @@
-
 <?php
-
-    
 
 if (isset($_FILES)) {
     header("Content-Type: application/json");
@@ -9,7 +6,7 @@ if (isset($_FILES)) {
 
     $pipes = [
         1 => ["pipe", "w"],
-        2 => ["file", "error.txt", "a"]
+        2 => ["file", "error.log", "a"]
     ];
     $p = [];
     $process = proc_open('ffmpeg -i video.mp4 -preset ultrafast -threads 24 -f mp3 pipe:1', $pipes, $p);
