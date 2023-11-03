@@ -1,5 +1,6 @@
 FROM php:8.2-cli
 
+
 RUN apt-get clean \ 
     && apt-get update \
     && apt-get install -y ffmpeg \
@@ -10,12 +11,12 @@ RUN apt-get clean \
 
 WORKDIR /var/www/html
 
+COPY ./php.ini "$PHP_INI_DIR/php.ini"
+
 COPY . .
 
 RUN  composer install --no-dev
 
 EXPOSE 8080
-
-USER 1001
 
 CMD ["php", "-S", "0.0.0.0:8080"]
