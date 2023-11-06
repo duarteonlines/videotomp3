@@ -1,9 +1,27 @@
 <?php
 
-// header("Content-Type: application/json");
+function cors()
+{
+    if (isset($_SERVER['HTTP_ORIGIN'])) {
+        header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+        header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Max-Age: 86400');
+    }
 
-if (isset($_POST['submit'], $_POST['format_type'], $_POST['quality'], $_POST['compression_preset'], $_FILES['file'])) {
+    if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
+        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+            header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+
+        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+            header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+        exit(0);
+    }
+}
+
+cors();
+
+if (isset($_POST['format_type'], $_POST['quality'], $_POST['compression_preset'], $_FILES['file'])) {
     $format_type = escapeshellcmd($_POST['format_type']);
     $compression_preset = escapeshellcmd($_POST['compression_preset']);
     $quality = escapeshellcmd($_POST['quality']);
@@ -22,9 +40,13 @@ if (isset($_POST['submit'], $_POST['format_type'], $_POST['quality'], $_POST['co
             'ultrafast'
         ],
         'quality' => [
-            '17',
-            '34',
-            '51'
+            "51",
+            "45",
+            "34",
+            "23",
+            "15",
+            "10",
+            "0"
         ]
     ];
 
@@ -56,24 +78,7 @@ if (isset($_POST['submit'], $_POST['format_type'], $_POST['quality'], $_POST['co
                 $final_file .= base64_encode(stream_get_contents($p[1]));
             }
 
-            echo "
-            <iframe width='500' height='500' id='audio'></iframe>
-            <script>
-            var base64String = '$final_file';
-            var byteCharacters = atob(base64String);
-            var byteNumbers = new Array(byteCharacters.length);
-            for (var i = 0; i < byteCharacters.length; i++) {
-            byteNumbers[i] = byteCharacters.charCodeAt(i);
-            }
-            var byteArray = new Uint8Array(byteNumbers);
-            var blob = new Blob([byteArray], {type: 'audio/$format_type'});
-            var url = URL.createObjectURL(blob);
-            
-            var audio = document.getElementById('audio');
-            audio.src = url;
-            </script>";
-
-            // echo json_encode($final_file, JSON_UNESCAPED_SLASHES);
+            echo json_encode(["file" => $final_file], JSON_UNESCAPED_SLASHES);
 
             if (feof($p[1])) {
                 fclose($p[1]);
@@ -85,5 +90,6 @@ if (isset($_POST['submit'], $_POST['format_type'], $_POST['quality'], $_POST['co
         echo json_encode(["error" => "Arquivo ou formato de saída inválido"]);
     }
 } else {
+    header("400 Bad Request", 400);
     echo json_encode(["error" => "Você precisa enviar um arquivo de vídeo."]);
 }
