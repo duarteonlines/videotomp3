@@ -1,5 +1,4 @@
-FROM php:8.2-cli
-
+FROM openswoole/swoole:latest
 
 RUN apt-get clean \ 
     && apt-get update \
@@ -14,8 +13,6 @@ WORKDIR /var/www/html
 COPY ./php.ini "$PHP_INI_DIR/php.ini"
 
 COPY . .
-
-RUN  composer install --no-dev
 
 EXPOSE 8080
 
