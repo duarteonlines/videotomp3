@@ -38,7 +38,7 @@ if (isset($_POST['format_type'], $_POST['quality'], $_POST['compression_preset']
     if (in_array($file["type"], $validation_schema['mimetypes_permited']) && in_array($format_type, $validation_schema['format_types_accepted']) && in_array($compression_preset, $validation_schema['presets_accepted']) && in_array($quality, $validation_schema['quality'])) {
 
         $file_extension = explode("/", $file["type"])[1];
-        $filename = 'videos/' . str_replace(" ", "_", microtime()) . $file_extension;
+        $filename = 'videos/' . str_replace(" ", "_", microtime()) . ".$file_extension";
         $is_file_moved = move_uploaded_file($file['tmp_name'], $filename);
 
         if (!$is_file_moved) {

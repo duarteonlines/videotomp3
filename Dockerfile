@@ -1,4 +1,4 @@
-FROM openswoole/swoole:latest
+FROM php:8.2-cli
 
 RUN apt-get clean \ 
     && apt-get update \
