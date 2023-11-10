@@ -1,0 +1,18 @@
+{
+    "name": "duarteonlines/videostreaming",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Oliveira",
+            "email": "duarteonlines@gmail.com"
+        },
+        {
+            "name": "Felipe Monteiro"
+        }
+    ],
+    "require": {}
+}

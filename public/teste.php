@@ -6,7 +6,7 @@
 
 <body>
 
-    <form action="index.php" method="post" enctype="multipart/form-data">
+    <form action="/videoconverter" method="post" enctype="multipart/form-data">
         <label for="file"><span>Filename:</span></label>
         <input type="file" required name="file" id="file" />
         <br />
