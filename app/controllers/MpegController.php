@@ -2,9 +2,6 @@
 namespace app\controllers;
 
 class MpegController{
-    public function teste($params){
-        var_dump($params);
-    }
 
     public function converter($params){
         $format_type = escapeshellcmd($params->format_type);
