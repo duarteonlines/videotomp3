@@ -1,94 +1,0 @@
-ffmpeg version 5.1.3-1 Copyright (c) 2000-2022 the FFmpeg developers
-  built with gcc 12 (Debian 12.2.0-14)
-  configuration: --prefix=/usr --extra-version=1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
-  libavutil      57. 28.100 / 57. 28.100
-  libavcodec     59. 37.100 / 59. 37.100
-  libavformat    59. 27.100 / 59. 27.100
-  libavdevice    59.  7.100 / 59.  7.100
-  libavfilter     8. 44.100 /  8. 44.100
-  libswscale      6.  7.100 /  6.  7.100
-  libswresample   4.  7.100 /  4.  7.100
-  libpostproc    56.  6.100 / 56.  6.100
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '../app/videos/0.86842800_1699638703.mp4':
-  Metadata:
-    major_brand     : mp42
-    minor_version   : 0
-    compatible_brands: isommp42
-    creation_time   : 2022-03-16T17:39:37.000000Z
-  Duration: 00:05:13.79, start: 0.000000, bitrate: 466 kb/s
-  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 640x360 [SAR 1:1 DAR 16:9], 334 kb/s, 29.97 fps, 29.97 tbr, 11988 tbn (default)
-    Metadata:
-      creation_time   : 2022-03-16T17:39:37.000000Z
-      handler_name    : ISO Media file produced by Google Inc. Created on: 03/16/2022.
-      vendor_id       : [0][0][0][0]
-  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
-    Metadata:
-      creation_time   : 2022-03-16T17:39:37.000000Z
-      handler_name    : ISO Media file produced by Google Inc. Created on: 03/16/2022.
-      vendor_id       : [0][0][0][0]
-Codec AVOption preset (Encoding preset) specified for output file #0 (pipe:1) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
-Codec AVOption crf (Select the quality for constant quality mode) specified for output file #0 (pipe:1) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
-Stream mapping:
-  Stream #0:1 -> #0:0 (aac (native) -> mp3 (libmp3lame))
-Press [q] to stop, [?] for help
-Output #0, mp3, to 'pipe:1':
-  Metadata:
-    major_brand     : mp42
-    minor_version   : 0
-    compatible_brands: isommp42
-    TSSE            : Lavf59.27.100
-  Stream #0:0(und): Audio: mp3, 44100 Hz, stereo, fltp (default)
-    Metadata:
-      creation_time   : 2022-03-16T17:39:37.000000Z
-      handler_name    : ISO Media file produced by Google Inc. Created on: 03/16/2022.
-      vendor_id       : [0][0][0][0]
-      encoder         : Lavc59.37.100 libmp3lame
-size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    size=    1282kB time=00:00:45.34 bitrate= 231.5kbits/s speed=90.7x    size=    2643kB time=00:01:31.42 bitrate= 236.8kbits/s speed=91.4x    size=    3848kB time=00:02:13.40 bitrate= 236.3kbits/s speed=88.9x    size=    4991kB time=00:02:53.14 bitrate= 236.1kbits/s speed=86.5x    size=    6249kB time=00:03:37.86 bitrate= 235.0kbits/s speed=87.1x    size=    7262kB time=00:04:13.83 bitrate= 234.4kbits/s speed=84.6x    size=    8425kB time=00:04:55.15 bitrate= 233.8kbits/s speed=84.3x    size=    8958kB time=00:05:13.81 bitrate= 233.8kbits/s speed=84.8x    
-video:0kB audio:8957kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.001505%
-ffmpeg version 5.1.3-1 Copyright (c) 2000-2022 the FFmpeg developers
-  built with gcc 12 (Debian 12.2.0-14)
-  configuration: --prefix=/usr --extra-version=1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
-  libavutil      57. 28.100 / 57. 28.100
-  libavcodec     59. 37.100 / 59. 37.100
-  libavformat    59. 27.100 / 59. 27.100
-  libavdevice    59.  7.100 / 59.  7.100
-  libavfilter     8. 44.100 /  8. 44.100
-  libswscale      6.  7.100 /  6.  7.100
-  libswresample   4.  7.100 /  4.  7.100
-  libpostproc    56.  6.100 / 56.  6.100
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '../app/videos/0.95987400_1699639047.mp4':
-  Metadata:
-    major_brand     : mp42
-    minor_version   : 0
-    compatible_brands: isommp42
-    creation_time   : 2022-03-16T17:39:37.000000Z
-  Duration: 00:05:13.79, start: 0.000000, bitrate: 466 kb/s
-  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 640x360 [SAR 1:1 DAR 16:9], 334 kb/s, 29.97 fps, 29.97 tbr, 11988 tbn (default)
-    Metadata:
-      creation_time   : 2022-03-16T17:39:37.000000Z
-      handler_name    : ISO Media file produced by Google Inc. Created on: 03/16/2022.
-      vendor_id       : [0][0][0][0]
-  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
-    Metadata:
-      creation_time   : 2022-03-16T17:39:37.000000Z
-      handler_name    : ISO Media file produced by Google Inc. Created on: 03/16/2022.
-      vendor_id       : [0][0][0][0]
-Codec AVOption preset (Encoding preset) specified for output file #0 (pipe:1) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
-Codec AVOption crf (Select the quality for constant quality mode) specified for output file #0 (pipe:1) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
-Stream mapping:
-  Stream #0:1 -> #0:0 (aac (native) -> mp3 (libmp3lame))
-Press [q] to stop, [?] for help
-Output #0, mp3, to 'pipe:1':
-  Metadata:
-    major_brand     : mp42
-    minor_version   : 0
-    compatible_brands: isommp42
-    TSSE            : Lavf59.27.100
-  Stream #0:0(und): Audio: mp3, 44100 Hz, stereo, fltp (default)
-    Metadata:
-      creation_time   : 2022-03-16T17:39:37.000000Z
-      handler_name    : ISO Media file produced by Google Inc. Created on: 03/16/2022.
-      vendor_id       : [0][0][0][0]
-      encoder         : Lavc59.37.100 libmp3lame
-size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    size=    1171kB time=00:00:41.37 bitrate= 231.8kbits/s speed=82.7x    size=    2442kB time=00:01:24.76 bitrate= 236.0kbits/s speed=84.7x    size=    3500kB time=00:02:01.26 bitrate= 236.5kbits/s speed=80.8x    size=    4719kB time=00:02:43.68 bitrate= 236.2kbits/s speed=81.8x    size=    5904kB time=00:03:25.66 bitrate= 235.2kbits/s speed=82.3x    size=    7158kB time=00:04:10.14 bitrate= 234.4kbits/s speed=83.4x    size=    8382kB time=00:04:53.61 bitrate= 233.8kbits/s speed=83.9x    size=    8958kB time=00:05:13.81 bitrate= 233.8kbits/s speed=83.7x    
-video:0kB audio:8957kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.001505%

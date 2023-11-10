@@ -4,9 +4,11 @@ namespace app\controllers;
 class MpegController{
 
     public function converter($params){
+        
         $format_type = escapeshellcmd($params->format_type);
         $compression_preset = escapeshellcmd($params->compression_preset);
         $quality = escapeshellcmd($params->quality);
+
         $file = $_FILES['file'];
         $validation_schema = [
             'format_types_accepted' => [
@@ -33,7 +35,7 @@ class MpegController{
         ];        
     
         if (in_array($file["type"], $validation_schema['mimetypes_permited']) && in_array($format_type, $validation_schema['format_types_accepted']) && in_array($compression_preset, $validation_schema['presets_accepted']) && in_array($quality, $validation_schema['quality'])) {
-
+            
             $file_extension = explode("/", $file["type"])[1];
             $filename = '../app/videos/' . str_replace(" ", "_", microtime()) . ".$file_extension";
             $is_file_moved = move_uploaded_file($file['tmp_name'], $filename);
@@ -59,7 +61,7 @@ class MpegController{
                     $final_file .= base64_encode(stream_get_contents($p[1]));
                 }
     
-                echo json_encode(["file" => $final_file], JSON_UNESCAPED_SLASHES);
+                echo json_encode(["cacheable" => true, "file" => $final_file], JSON_UNESCAPED_SLASHES);
     
                 if (feof($p[1])) {
                     fclose($p[1]);
