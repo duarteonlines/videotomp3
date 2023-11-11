@@ -18,11 +18,11 @@ COPY ./php.ini "$PHP_INI_DIR/php.ini"
 
 COPY . .
 
-RUN groupadd --force -g 1001 felipe
-RUN useradd -ms /bin/bash --no-user-group -g 1001 -u 1001 felipe
-RUN chmod -R o=rwx .
+# RUN groupadd --force -g 1001 felipe
+# RUN useradd -ms /bin/bash --no-user-group -g 1001 -u 1001 felipe
+# RUN chmod -R o=rwx .
 
-USER felipe
+# USER felipe
 
 RUN composer install --prefer-dist --no-dev
 
