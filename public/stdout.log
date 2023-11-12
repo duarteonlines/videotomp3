@@ -1,0 +1,90 @@
+ffmpeg version 5.1.3-1 Copyright (c) 2000-2022 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '../app/videos/0.42412400_1699808954.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    creation_time   : 2023-07-26T19:14:32.000000Z
+  Duration: 00:03:44.03, start: 0.000000, bitrate: 1007 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 875 kb/s, 29.97 fps, 29.97 tbr, 30k tbn (default)
+    Metadata:
+      creation_time   : 2023-07-26T19:14:32.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 07/26/2023.
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      creation_time   : 2023-07-26T19:14:32.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 07/26/2023.
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'pipe:1':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    TSSE            : Lavf59.27.100
+  Stream #0:0(eng): Audio: mp3, 44100 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      creation_time   : 2023-07-26T19:14:32.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 07/26/2023.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc59.37.100 libmp3lame
+size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    size=     725kB time=00:00:24.92 bitrate= 238.2kbits/s speed=49.8x    size=    1437kB time=00:00:50.02 bitrate= 235.4kbits/s speed=  50x    size=    2144kB time=00:01:15.10 bitrate= 233.9kbits/s speed=  50x    size=    2893kB time=00:01:42.66 bitrate= 230.8kbits/s speed=51.3x    size=    3637kB time=00:02:08.62 bitrate= 231.6kbits/s speed=51.4x    size=    4407kB time=00:02:35.58 bitrate= 232.0kbits/s speed=51.8x    size=    5194kB time=00:03:03.04 bitrate= 232.4kbits/s speed=52.3x    size=    5975kB time=00:03:30.20 bitrate= 232.8kbits/s speed=52.5x    size=    6385kB time=00:03:44.02 bitrate= 233.5kbits/s speed=52.5x    
+video:0kB audio:6384kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.002111%
+ffmpeg version 5.1.3-1 Copyright (c) 2000-2022 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '../app/videos/0.86488000_1699808978.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    creation_time   : 2023-07-26T19:14:32.000000Z
+  Duration: 00:03:44.03, start: 0.000000, bitrate: 1007 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 875 kb/s, 29.97 fps, 29.97 tbr, 30k tbn (default)
+    Metadata:
+      creation_time   : 2023-07-26T19:14:32.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 07/26/2023.
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      creation_time   : 2023-07-26T19:14:32.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 07/26/2023.
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'pipe:1':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    TSSE            : Lavf59.27.100
+  Stream #0:0(eng): Audio: mp3, 44100 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      creation_time   : 2023-07-26T19:14:32.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 07/26/2023.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc59.37.100 libmp3lame
+size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    size=     776kB time=00:00:26.77 bitrate= 237.6kbits/s speed=53.5x    size=    1516kB time=00:00:52.66 bitrate= 235.8kbits/s speed=52.6x    size=    2249kB time=00:01:19.04 bitrate= 233.1kbits/s speed=52.7x    size=    3022kB time=00:01:47.10 bitrate= 231.1kbits/s speed=53.5x    size=    3802kB time=00:02:14.53 bitrate= 231.5kbits/s speed=53.8x    size=    4577kB time=00:02:41.56 bitrate= 232.1kbits/s speed=53.8x    size=    5339kB time=00:03:08.10 bitrate= 232.5kbits/s speed=53.7x    size=    6109kB time=00:03:34.72 bitrate= 233.0kbits/s speed=53.7x    size=    6385kB time=00:03:44.02 bitrate= 233.5kbits/s speed=53.7x    
+video:0kB audio:6384kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.002111%
