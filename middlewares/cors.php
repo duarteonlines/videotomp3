@@ -8,7 +8,7 @@ function cors()
         header('Access-Control-Max-Age: 86400');
     }
 
-    header('Conten-Type: application/json');
+    header('Content-Type: application/json');
 
     if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
         if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
