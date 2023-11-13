@@ -61,7 +61,7 @@ class MpegController
         ];
         $p = [];
 
-        $cmd = "ffmpeg -i $filename -vn -q:a $quality -ab $bitrate -ac $chanell  -f $format_type pipe:1";
+        $cmd = "ffmpeg -i $filename -vn -q:a $quality -ab $bitrate -ac $chanell -f $format_type pipe:1";
         $process = proc_open($cmd, $pipes, $p);
 
         if (is_resource($process)) {
@@ -77,7 +77,7 @@ class MpegController
             header("Cache-Control: max-age=604800, must-revalidate");
 
             echo json_encode(["file" => $final_file], JSON_UNESCAPED_SLASHES);
-            exit();
+            exit;
         }
 
         echo json_encode(['message' => "Algo de errado não está certo. Contate o suporte."]);

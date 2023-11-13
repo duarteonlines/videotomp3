@@ -23,6 +23,6 @@ function load(string $controller, string $action)
 
 $router = [
     'POST' => [
-        '/videoconverter' => fn () => load('MpegController', 'converter')
+        '/videoconverter/audio' => fn () => load('MpegController', 'converter')
     ]
 ];
