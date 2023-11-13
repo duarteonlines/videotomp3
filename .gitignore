@@ -1,5 +1,4 @@
 /*.lock
-/*.log
-/videos/
+/**/videos
 /vendor/
-/*.log
+/public/*.log
