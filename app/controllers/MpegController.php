@@ -74,6 +74,8 @@ class MpegController
             fclose($p[1]);
             unlink($filename);
 
+            header("Cache-Control: max-age=604800, must-revalidate");
+
             echo json_encode(["file" => $final_file], JSON_UNESCAPED_SLASHES);
         }
     }
